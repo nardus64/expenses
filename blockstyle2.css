@@ -21,7 +21,7 @@ var video;
     }
 
 body { color: black}
-body {background-color: lightblue} 
+body {background-color: lightgreen} 
 body{
     #figaudio1 {
         width : 420px;;
@@ -80,13 +80,23 @@ body{
 
     body {
         margin:0;
-        padding:0;
+        padding:3px;
         overflow:hidden;
     }
-
+fieldset{
+	align :center;
+}
+button {text-align: center;
+		width		:10%;
+		height		:50px;
+		border-radius: 10%;
+}
+		
 header{
- display: block;
+ display         : block;
  background-color: green;
+ padding         : 1px;
+ text-align      :center;
 }
 testing{
 	height: 50%;
