@@ -432,9 +432,9 @@ function testCompWin1(){
 }	
 function checkForWin1(blocka)
 	{ 
-	if(block1Clicks < randomClickNo)
+	if(Number(block1Clicks) < Number(randomClickNo))
 		{ block1Clicks ++;			
-		  if(block1Clicks === randomClickNo)
+		  if(Number(block1Clicks) === Number(randomClickNo))
 		  {usertotal ++;
 			drawendline1();
 		  }
@@ -444,7 +444,7 @@ function checkForWin1(blocka)
 function computerMove2(){
 	if (compmovedone = 'n')
 	{
-		if (block2Clicks < randomClickNo){
+		if (Number(block2Clicks) < Number(randomClickNo)){
 			var a = 0;
 			requestAnimationFrame(drawSomething2ac);
 			block2Clicks ++;
@@ -658,33 +658,7 @@ function setFocus(evt) {
 function unsetFocus(evt) {
    canvas.blur();
 };
-//1/11 end		
-// SAVE the values to localstorage, call functions to pop the text area //and  clearing fields for next input	 
-function saveme(){
-	
-	var Numf = document.getElementById("lexnum").value;
-	var Datf = document.getElementById("lexdate").value;
-	var textf = document.getElementById("lextext").value;
-	if (Numf > " "){	
-	var myresult = Datf + ", " + Numf  + ", " + textf;
-	var n = "expense" + (localStorage.length + 1);
-	var myresult = Datf + ", " + Numf  + ", " + textf;
-	localStorage.setItem(n,myresult);
-	document.getElementById("lextxtarea").value += myresult;
-	cleanfields();
 
-	}
-	else
-	{
-		alert ("Please enter values.");
-	}
-}
-// delete all the local starage values
-function clearlocal(){
-      // erase all key values from store 
-      localStorage.clear();
-	  document.getElementById("lextxtarea").value = " ";
-}
 // NOT USED populate the array to input into the textarea "lextxtarea"
 function popAray(){
 	var i = 0;
@@ -700,10 +674,7 @@ function popAray(){
 	alert("1 " + listArry[i]);}
 //	
 }
-// clean the fields for re input
-function cleanfields(){
-		document.getElementById("lexnum").value = " ";
-		document.getElementById("lextext").value = " ";
+
 
 }	
  function sleep(milliseconds) {
@@ -714,9 +685,6 @@ function cleanfields(){
     }
   }
 }
-function newExpens(){
-var lexexpense = " ";
-alert("new  expense to be added here");
-}
+
 
    
